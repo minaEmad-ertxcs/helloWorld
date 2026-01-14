@@ -1,2 +1,14 @@
-FROM alpine
-CMD ["echo", "Hello World"]
+# Use OpenJDK 17 for Spring Boot
+FROM eclipse-temurin:17-jdk-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy the jar built by Maven or Gradle
+COPY target/*.jar app.jar
+
+# Expose port
+EXPOSE 8080
+
+# Run the jar
+ENTRYPOINT ["java","-jar","app.jar"]
