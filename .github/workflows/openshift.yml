@@ -199,5 +199,5 @@ jobs:
         echo "======================== Your application is available at: ========================"
         echo ${{ env.ROUTE }}
         echo "==================================================================================="
-        echo
-        echo "Your app can be taken down with: \"oc delete all --selector='${{ env.SELECTOR }}'\""
+        # echo
+        # echo "Your app can be taken down with: \"oc delete all --selector='${{ env.SELECTOR }}'\""
